@@ -2,7 +2,7 @@
 
 using namespace std;
 
-void mySwap(int &,int &); 
+void mySwap(int &,int &);
 
 int main(){
 	int x,y;
@@ -14,4 +14,15 @@ int main(){
 	cout << "x = " << x << ", y = " << y << "\n";
 	
 	return 0;
+}
+
+void mySwap(int &x,int &y){
+	int diff = y-x;
+	if(diff>0){
+		y=y-diff;
+		x=x+diff;
+	}else if(diff < 0){
+		y=y-(diff*(-1));
+		x=x+(diff*(-1));
+	}
 }
